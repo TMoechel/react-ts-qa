@@ -1,13 +1,25 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react';
 
-function App() {
+import React from 'react';
+import Header from './components/Header';
+import { HomePage } from './components/HomePage';
+import { fontFamily, fontSize, gray2 } from './styles';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
+    <div
+      css={css`
+        font-family: ${fontFamily};
+        font-size: ${fontSize};
+        color: ${gray2};
+      `}
+    >
       <Header />
+      <HomePage />
     </div>
   );
-}
+};
 
 export default App;
